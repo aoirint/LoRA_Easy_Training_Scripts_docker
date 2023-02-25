@@ -9,20 +9,21 @@
 - [Docker Engine](https://docs.docker.com/engine/install/ubuntu/) 23.0 or later
 - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
 
-## Build
+## Usage
+### 1. Build Docker image
 
 ```shell
 docker build . -t lets
 ```
 
-## Base Models
+### 2. Prepare Base Models
 
 ```shell
 mkdir base_model
 cd base_model
 ```
 
-### ACertainThing
+#### ACertainThing
 
 - <https://huggingface.co/JosephusCheung/ACertainThing>
 
@@ -33,7 +34,7 @@ echo '866946217b513157b12ff9b1eae2279e98ae34ece178e34eac536f2e831c101c  ACertain
 
 <details>
 
-### ACertainty
+#### ACertainty
 
 - <https://huggingface.co/JosephusCheung/ACertainty>
 
@@ -44,15 +45,15 @@ echo 'a64573359af0f1071ef01d0dc93df2bc90eb1d0bcf3e26058fbf5aeff37c6462  ACertain
 
 </details>
 
-## Images
+### 2. Prepare Training Images
 
 TBW
 
-## Regularization Images
+### 3. Prepare Regularization Images
 
 TBW
 
-## Config
+### 4. Prepare JSON Config
 
 Create `work/20230225_001/config.json`.
 
@@ -65,7 +66,7 @@ Create `work/20230225_001/config.json`.
 }
 ```
 
-## Run
+### 5. Run Training
 
 - <https://github.com/derrian-distro/LoRA_Easy_Training_Scripts#list-of-arguments>
 
