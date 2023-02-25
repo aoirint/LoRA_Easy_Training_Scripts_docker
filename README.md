@@ -66,7 +66,8 @@ Create `work/20230225_001/config.json`.
   "reg_img_folder": "/work/20230225_001/reg_img",
   "output_folder": "/work/20230225_001/output",
   "num_epochs": 20,
-  "batch_size": 1
+  "batch_size": 1,
+  "save_every_n_epochs": 1
 }
 ```
 
