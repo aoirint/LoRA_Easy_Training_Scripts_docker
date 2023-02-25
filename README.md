@@ -55,6 +55,8 @@ TBW
 
 ### 4. Prepare JSON Config
 
+- <https://github.com/derrian-distro/LoRA_Easy_Training_Scripts#list-of-arguments>
+
 Create `work/20230225_001/config.json`.
 
 ```json
@@ -67,8 +69,6 @@ Create `work/20230225_001/config.json`.
 ```
 
 ### 5. Run Training
-
-- <https://github.com/derrian-distro/LoRA_Easy_Training_Scripts#list-of-arguments>
 
 ```shell
 docker run --rm \
