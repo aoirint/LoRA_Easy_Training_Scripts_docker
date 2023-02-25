@@ -13,7 +13,7 @@
 ### 1. Build Docker image
 
 ```shell
-docker build . -t lets
+docker build . -t aoirint/lora_ets
 ```
 
 ### 2. Prepare Base Models
@@ -75,6 +75,6 @@ docker run --rm \
   --gpus all \
   -v "./base_model:/base_model" \
   -v "./work:/work" \
-  lets \
+  aoirint/lora_ets \
   --load_json_path=/work/20230225_001/config.json
 ```
