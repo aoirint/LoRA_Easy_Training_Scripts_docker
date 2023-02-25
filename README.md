@@ -64,7 +64,9 @@ Create `work/20230225_001/config.json`.
   "base_model": "/base_model/ACertainThing.ckpt",
   "img_folder": "/work/20230225_001/img",
   "reg_img_folder": "/work/20230225_001/reg_img",
-  "output_folder": "/work/20230225_001/output"
+  "output_folder": "/work/20230225_001/output",
+  "num_epochs": 20,
+  "batch_size": 1
 }
 ```
 
