@@ -82,21 +82,21 @@ ARG LETS_VERSION=5fbcd41e051f3ea58b355de2f967f2fdaed8148c
 RUN <<EOF
     set -eu
 
-    mkdir -p /opt
-    chown -R user:user /opt
+    mkdir -p /code
+    chown -R user:user /code
 
-    gosu user git clone "${LETS_URL}" /opt/LoRA_Easy_Training_Scripts
-    cd /opt/LoRA_Easy_Training_Scripts
+    gosu user git clone "${LETS_URL}" /code/LoRA_Easy_Training_Scripts
+    cd /code/LoRA_Easy_Training_Scripts
     gosu user git submodule update --init
     gosu user git checkout "${LETS_VERSION}"
 EOF
 
-WORKDIR /opt/LoRA_Easy_Training_Scripts
-ADD ./requirements-torch.txt /opt/LoRA_Easy_Training_Scripts/sd_scripts/
+WORKDIR /code/LoRA_Easy_Training_Scripts
+ADD ./requirements-torch.txt /code/LoRA_Easy_Training_Scripts/sd_scripts/
 RUN <<EOF
     set -eu
 
-    cd /opt/LoRA_Easy_Training_Scripts/sd_scripts/
+    cd /code/LoRA_Easy_Training_Scripts/sd_scripts/
     gosu user pip3 install -r ./requirements-torch.txt
     gosu user pip3 install -r ./requirements.txt
 EOF
@@ -104,7 +104,7 @@ EOF
 RUN <<EOF
     set -eu
 
-    cd /opt/LoRA_Easy_Training_Scripts/sd_scripts/
+    cd /code/LoRA_Easy_Training_Scripts/sd_scripts/
     # gosu user accelerate config
     gosu user mkdir -p /home/user/.cache/huggingface/accelerate
     gosu user tee /home/user/.cache/huggingface/accelerate/default_config.yaml <<EOT
