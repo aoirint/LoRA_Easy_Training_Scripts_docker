@@ -3,6 +3,12 @@
 - <https://github.com/derrian-distro/LoRA_Easy_Training_Scripts>
 - <https://economylife.net/kohya-lora-install-use/>
 
+## Environments
+
+- Ubuntu 20.04 or later
+- [Docker Engine](https://docs.docker.com/engine/install/ubuntu/) 23.0 or later
+- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
+
 ## Build
 
 ```shell
@@ -64,7 +70,6 @@ Create `work/20230225_001/config.json`.
 - <https://github.com/derrian-distro/LoRA_Easy_Training_Scripts#list-of-arguments>
 
 ```shell
-# Docker Engine >= 23.0
 docker run --rm \
   --gpus all \
   -v "./base_model:/base_model" \
