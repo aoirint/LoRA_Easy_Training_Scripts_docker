@@ -78,6 +78,7 @@ docker run --rm \
   --gpus all \
   -v "./base_model:/base_model" \
   -v "./work:/work" \
+  -v "./cache/huggingface:/home/user/.cache/huggingface" \
   aoirint/lora_ets \
   --load_json_path=/work/20230225_001/config.json
 ```
