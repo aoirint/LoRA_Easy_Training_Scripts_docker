@@ -23,6 +23,29 @@ mkdir base_model
 cd base_model
 ```
 
+#### Anything v4.5
+
+- <https://huggingface.co/andite/anything-v4.0>
+
+```shell
+wget https://huggingface.co/andite/anything-v4.0/resolve/main/anything-v4.5.ckpt
+echo 'fbcf965a62d9d82e935d3d17e97522c29f44550aa9e120a6886f19b578521ec5  anything-v4.5.ckpt' | sha256sum -c -
+```
+
+#### Anything v4.0
+
+- <https://huggingface.co/andite/anything-v4.0>
+
+```shell
+wget https://huggingface.co/andite/anything-v4.0/resolve/main/anything-v4.0.ckpt
+echo '3b26c9c497c923a07ab8d55f2921cf44749535e4b0c890c5c37968e4c90e7258  anything-v4.0.ckpt' | sha256sum -c -
+
+wget https://huggingface.co/andite/anything-v4.0/resolve/main/anything-v4.0.vae.pt
+echo 'f921fb3f29891d2a77a6571e56b8b5052420d2884129517a333c60b1b4816cdf  anything-v4.0.vae.pt' | sha256sum -c -
+```
+
+<details>
+
 #### ACertainThing
 
 - <https://huggingface.co/JosephusCheung/ACertainThing>
@@ -31,8 +54,6 @@ cd base_model
 wget https://huggingface.co/JosephusCheung/ACertainThing/resolve/main/ACertainThing.ckpt
 echo '866946217b513157b12ff9b1eae2279e98ae34ece178e34eac536f2e831c101c  ACertainThing.ckpt' | sha256sum -c -
 ```
-
-<details>
 
 #### ACertainty
 
