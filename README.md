@@ -95,7 +95,7 @@ Create `work/20230225_001/config.json`.
 ### 5. Run Training
 
 ```shell
-mkdir cache/huggingface/hub
+mkdir -p cache/huggingface/hub
 chown -R 1000:1000 cache
 
 docker run --rm \
