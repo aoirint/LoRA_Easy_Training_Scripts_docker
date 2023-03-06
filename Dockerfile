@@ -87,8 +87,8 @@ RUN <<EOF
 
     gosu user git clone "${LETS_URL}" /code/LoRA_Easy_Training_Scripts
     cd /code/LoRA_Easy_Training_Scripts
-    gosu user git submodule update --init
     gosu user git checkout "${LETS_VERSION}"
+    gosu user git submodule update --init
 EOF
 
 WORKDIR /code/LoRA_Easy_Training_Scripts
