@@ -134,4 +134,19 @@ EOT
 
 EOF
 
+# Workaround: PIL image size limit; OSError: image file is truncated
+RUN <<EOF
+    set -eu
+
+    # prepend two lines to prevent error
+    gosu user tee main.py.new <<EOT
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+EOT
+
+    cat main.py | gosu user tee -a main.py.new
+
+    gosu user mv main.py.new main.py
+EOF
+
 ENTRYPOINT [ "gosu", "user", "accelerate", "launch", "main.py" ]
