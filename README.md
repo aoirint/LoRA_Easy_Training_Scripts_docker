@@ -95,11 +95,14 @@ Create `work/20230225_001/config.json`.
 ### 5. Run Training
 
 ```shell
+mkdir cache/huggingface/hub
+chown -R 1000:1000 cache
+
 docker run --rm \
   --gpus all \
   -v "./base_model:/base_model" \
   -v "./work:/work" \
-  -v "./cache/huggingface:/home/user/.cache/huggingface" \
+  -v "./cache/huggingface/hub:/home/user/.cache/huggingface/hub" \
   aoirint/lora_ets \
   --load_json_path=/work/20230225_001/config.json
 ```
