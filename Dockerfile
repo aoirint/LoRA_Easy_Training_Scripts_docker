@@ -77,7 +77,7 @@ RUN <<EOF
 EOF
 
 ARG LETS_URL=https://github.com/derrian-distro/LoRA_Easy_Training_Scripts
-ARG LETS_VERSION=5fbcd41e051f3ea58b355de2f967f2fdaed8148c
+ARG LETS_VERSION=7195f6282123eceb8ffcb7674b35e6ec4db2cfd1
 
 RUN <<EOF
     set -eu
