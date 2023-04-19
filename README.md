@@ -23,7 +23,9 @@ mkdir base_model
 cd base_model
 ```
 
-#### Waifu Diffusion v1.4 Epoch 2
+#### Stable Diffusion v2.x Based Models
+
+##### Waifu Diffusion v1.4 Epoch 2
 
 - <https://huggingface.co/hakurei/waifu-diffusion-v1-4>
 
@@ -37,7 +39,7 @@ echo 'df3c506e51b7ee1d7b5a6a2bb7142d47d488743c96aa778afb0f53a2cdc2d38d  kl-f8-an
 
 <details>
 
-#### Waifu Diffusion v1.5 Beta 2
+##### Waifu Diffusion v1.5 Beta 2
 
 - <https://huggingface.co/waifu-diffusion/wd-1-5-beta2>
 
@@ -46,7 +48,14 @@ wget 'https://huggingface.co/waifu-diffusion/wd-1-5-beta2/resolve/main/checkpoin
 echo '764f93581d80b46011039bb388e899f17f7869fce7e7928b060e9a5574bd8f84  wd-1-5-beta2-fp32.safetensors' | sha256sum -c -
 ```
 
-#### Waifu Diffusion v1.3
+</details>
+
+
+#### Stable Diffusion v1.x Based Models
+
+<details>
+
+##### Waifu Diffusion v1.3
 
 - <https://huggingface.co/hakurei/waifu-diffusion-v1-3>
 
@@ -55,7 +64,7 @@ wget 'https://huggingface.co/hakurei/waifu-diffusion-v1-3/resolve/main/wd-v1-3-f
 echo '10912b9a6d773ea7c299c0563d10538ada04ade81837362b6c0c67be4df937c1  wd-v1-3-full-opt.ckpt' | sha256sum -c -
 ```
 
-#### Anything v5
+##### Anything v5
 
 - <https://civitai.com/models/9409?modelVersionId=29588>
 
@@ -63,7 +72,7 @@ echo '10912b9a6d773ea7c299c0563d10538ada04ade81837362b6c0c67be4df937c1  wd-v1-3-
 echo '7f96a1a9ca9b3a3242a9ae95d19284f0d2da8d5282b42d2d974398bf7663a252  anything-v5-prt-re.safetensors' | sha256sum -c -
 ```
 
-#### Anything v4.5
+##### Anything v4.5
 
 - <https://huggingface.co/andite/anything-v4.0>
 
@@ -72,7 +81,7 @@ wget 'https://huggingface.co/andite/anything-v4.0/resolve/main/anything-v4.5.ckp
 echo 'fbcf965a62d9d82e935d3d17e97522c29f44550aa9e120a6886f19b578521ec5  anything-v4.5.ckpt' | sha256sum -c -
 ```
 
-#### Anything v4.0
+##### Anything v4.0
 
 - <https://huggingface.co/andite/anything-v4.0>
 
@@ -84,7 +93,7 @@ wget 'https://huggingface.co/andite/anything-v4.0/resolve/main/anything-v4.0.vae
 echo 'f921fb3f29891d2a77a6571e56b8b5052420d2884129517a333c60b1b4816cdf  anything-v4.0.vae.pt' | sha256sum -c -
 ```
 
-#### Anything v3
+##### Anything v3
 
 - <https://civitai.com/models/9409?modelVersionId=11162>
 - <https://huggingface.co/Linaqruf/anything-v3.0>
@@ -98,7 +107,7 @@ echo 'f921fb3f29891d2a77a6571e56b8b5052420d2884129517a333c60b1b4816cdf  anything
 echo 'abcaf14e5acb8023c79c3901f8ffc04eb3c646d7793f3b36a439bf09e32868cd  anything-v3-full.safetensors' | sha256sum -c -
 ```
 
-#### ACertainThing
+##### ACertainThing
 
 - <https://huggingface.co/JosephusCheung/ACertainThing>
 
@@ -107,7 +116,7 @@ wget 'https://huggingface.co/JosephusCheung/ACertainThing/resolve/main/ACertainT
 echo '866946217b513157b12ff9b1eae2279e98ae34ece178e34eac536f2e831c101c  ACertainThing.ckpt' | sha256sum -c -
 ```
 
-#### ACertainty
+##### ACertainty
 
 - <https://huggingface.co/JosephusCheung/ACertainty>
 
@@ -132,13 +141,32 @@ TBW
 
 Create `work/20230225_001/config.json`.
 
+#### Stable Diffusion v1.x Based Models
+
 ```json
 {
   "base_model": "/base_model/ACertainThing.ckpt",
   "img_folder": "/work/20230225_001/img",
   "reg_img_folder": "/work/20230225_001/reg_img",
   "output_folder": "/work/20230225_001/output",
-  "num_epochs": 20,
+  "num_epochs": 10,
+  "batch_size": 1,
+  "save_every_n_epochs": 1
+}
+```
+
+#### Stable Diffusion v2.x Based Models
+
+```json
+{
+  "base_model": "/base_model/wd-1-4-anime_e2.ckpt",
+  "v2": true,
+  "v_parameterization": true,
+  "clip_skip": null,
+  "img_folder": "/work/20230225_001/img",
+  "reg_img_folder": "/work/20230225_001/reg_img",
+  "output_folder": "/work/20230225_001/output",
+  "num_epochs": 10,
   "batch_size": 1,
   "save_every_n_epochs": 1
 }
