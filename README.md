@@ -160,20 +160,6 @@ Or you can use [this](transparent_1.png).
 
 Create `work/20230225_001/config.json`.
 
-#### Stable Diffusion v1.x Based Models
-
-```json
-{
-  "base_model": "/base_model/ACertainThing.ckpt",
-  "img_folder": "/work/20230225_001/img",
-  "reg_img_folder": "/work/20230225_001/reg_img",
-  "output_folder": "/work/20230225_001/output",
-  "num_epochs": 10,
-  "batch_size": 1,
-  "save_every_n_epochs": 1
-}
-```
-
 #### Stable Diffusion v2.x Based Models
 
 ```json
@@ -190,6 +176,24 @@ Create `work/20230225_001/config.json`.
   "save_every_n_epochs": 1
 }
 ```
+
+#### Stable Diffusion v1.x Based Models
+
+<details>
+
+```json
+{
+  "base_model": "/base_model/ACertainThing.ckpt",
+  "img_folder": "/work/20230225_001/img",
+  "reg_img_folder": "/work/20230225_001/reg_img",
+  "output_folder": "/work/20230225_001/output",
+  "num_epochs": 10,
+  "batch_size": 1,
+  "save_every_n_epochs": 1
+}
+```
+
+</details>
 
 ### 5. Run Training
 
