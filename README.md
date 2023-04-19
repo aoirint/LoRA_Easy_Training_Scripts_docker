@@ -195,11 +195,15 @@ Create `work/20230225_001/config.json`.
 
 </details>
 
+### 4. Prepare Output directory
+
+Create `work/20230225_001/output` directory.
+
 ### 5. Run Training
 
 ```shell
 mkdir -p cache/huggingface/hub
-chown -R 1000:1000 cache
+chown -R 1000:1000 base_model/ work/ cache/
 
 docker run --rm \
   --gpus all \
