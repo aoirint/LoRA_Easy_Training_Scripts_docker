@@ -23,7 +23,37 @@ mkdir base_model
 cd base_model
 ```
 
+#### Waifu Diffusion v1.4 Epoch 2
+
+- <https://huggingface.co/hakurei/waifu-diffusion-v1-4>
+
+```shell
+wget 'https://huggingface.co/hakurei/waifu-diffusion-v1-4/resolve/main/wd-1-4-anime_e2.ckpt'
+echo 'c76e0962bc60ccdc18e0dce387635b472b5a19038d637216030acbbe6eda2713  wd-1-4-anime_e2.ckpt' | sha256sum -c -
+
+wget 'https://huggingface.co/hakurei/waifu-diffusion-v1-4/resolve/main/vae/kl-f8-anime2.ckpt'
+echo 'df3c506e51b7ee1d7b5a6a2bb7142d47d488743c96aa778afb0f53a2cdc2d38d  kl-f8-anime2.ckpt' | sha256sum -c -
+```
+
 <details>
+
+#### Waifu Diffusion v1.5 Beta 2
+
+- <https://huggingface.co/waifu-diffusion/wd-1-5-beta2>
+
+```shell
+wget 'https://huggingface.co/waifu-diffusion/wd-1-5-beta2/resolve/main/checkpoints/wd-1-5-beta2-fp32.safetensors'
+echo '764f93581d80b46011039bb388e899f17f7869fce7e7928b060e9a5574bd8f84  wd-1-5-beta2-fp32.safetensors' | sha256sum -c -
+```
+
+#### Waifu Diffusion v1.3
+
+- <https://huggingface.co/hakurei/waifu-diffusion-v1-3>
+
+```shell
+wget 'https://huggingface.co/hakurei/waifu-diffusion-v1-3/resolve/main/wd-v1-3-full-opt.ckpt'
+echo '10912b9a6d773ea7c299c0563d10538ada04ade81837362b6c0c67be4df937c1  wd-v1-3-full-opt.ckpt' | sha256sum -c -
+```
 
 #### Anything v5
 
