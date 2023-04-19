@@ -97,8 +97,8 @@ RUN <<EOF
     set -eu
 
     cd /code/LoRA_Easy_Training_Scripts/sd_scripts/
-    gosu user pip3 install -r ./requirements-torch.txt
-    gosu user pip3 install -r ./requirements.txt
+    gosu user pip3 install --no-cache-dir -r ./requirements-torch.txt
+    gosu user pip3 install --no-cache-dir -r ./requirements.txt
 EOF
 
 RUN <<EOF
