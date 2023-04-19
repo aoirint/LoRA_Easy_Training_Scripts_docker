@@ -87,6 +87,7 @@ echo 'f921fb3f29891d2a77a6571e56b8b5052420d2884129517a333c60b1b4816cdf  anything
 #### Anything v3
 
 - <https://civitai.com/models/9409?modelVersionId=11162>
+- <https://huggingface.co/Linaqruf/anything-v3.0>
 
 ```shell
 echo '8712e20a5d65b6acaa743e8a74961eadfdf846a2c9a32160d80a80cba13ad475  anything-v3.ckpt' | sha256sum -c -
