@@ -23,6 +23,16 @@ mkdir base_model
 cd base_model
 ```
 
+<details>
+
+#### Anything v5
+
+- <https://civitai.com/models/9409?modelVersionId=29588>
+
+```shell
+echo '7f96a1a9ca9b3a3242a9ae95d19284f0d2da8d5282b42d2d974398bf7663a252  anything-v5-prt-re.safetensors' | sha256sum -c -
+```
+
 #### Anything v4.5
 
 - <https://huggingface.co/andite/anything-v4.0>
@@ -44,7 +54,18 @@ wget https://huggingface.co/andite/anything-v4.0/resolve/main/anything-v4.0.vae.
 echo 'f921fb3f29891d2a77a6571e56b8b5052420d2884129517a333c60b1b4816cdf  anything-v4.0.vae.pt' | sha256sum -c -
 ```
 
-<details>
+#### Anything v3
+
+- <https://civitai.com/models/9409?modelVersionId=11162>
+
+```shell
+echo '8712e20a5d65b6acaa743e8a74961eadfdf846a2c9a32160d80a80cba13ad475  anything-v3.ckpt' | sha256sum -c -
+
+echo 'f921fb3f29891d2a77a6571e56b8b5052420d2884129517a333c60b1b4816cdf  anything-v3.vae.pt' | sha256sum -c -
+
+# VAE embbeded
+echo 'abcaf14e5acb8023c79c3901f8ffc04eb3c646d7793f3b36a439bf09e32868cd  anything-v3-full.safetensors' | sha256sum -c -
+```
 
 #### ACertainThing
 
