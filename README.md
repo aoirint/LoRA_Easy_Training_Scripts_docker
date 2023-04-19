@@ -195,14 +195,34 @@ Create `work/20230225_001/config.json`.
 
 </details>
 
-### 4. Prepare Output directory
+### 4. Prepare Output and Cache directory
 
 Create `work/20230225_001/output` directory.
 
+Create `cache/huggingface/hub` directory.
+
 ### 5. Run Training
 
+#### Directory structure
+
+- `base_model/`
+- `work/20230225_001/`
+  - `img/20_my girl/`
+    - `0001.png`
+    - `0001.txt`
+    - `0002.jpg`
+    - `0002.txt`
+    - ...
+  - `reg_img/1_girl/`
+    - `transparent_1.png`
+    - `transparent_2.png`
+    - ...
+  - `output/`
+- `cache/huggingface/hub/`
+
+#### Command
+
 ```shell
-mkdir -p cache/huggingface/hub
 chown -R 1000:1000 base_model/ work/ cache/
 
 docker run --rm \
