@@ -1,6 +1,6 @@
 --extra-index-url https://download.pytorch.org/whl/cu116
-torch
-torchvision
-xformers
+torch==2.0.1+cu116
+torchvision==0.15.2+cu116
+xformers==0.0.20
 lion-pytorch
 dadaptation
